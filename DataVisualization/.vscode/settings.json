@@ -1,0 +1,14 @@
+{
+    "cSpell.ignoreWords": [
+        "arange",
+        "choropleth",
+        "dridlines",
+        "ggplot",
+        "mpatches",
+        "ncol",
+        "plt",
+        "tolist",
+        "xlim",
+        "yticks"
+    ]
+}

@@ -1,0 +1,274 @@
+= Machine learning with python - Notas das aulas
+
+:stem: latexmath
+
+== Módulo 1
+=== Principais técnicas de machine learning
+Existem diversos tipos de algoritmos dependendo do tipo de aplicação.
+
+==== Supervised - Supervisionado
+
+Técnicas de aprendizado supervisionado são todas aquelas em que o algoritmo sabe previamente qual a resposta certa para o que esta sendo modelado, ou seja, utiliza-se #_labelled data_#.
+
+. *Classification* - Utilizado na predição da classe ou categoria de alguma coisa, por exemplo, detecção da letra a partir da escrita cursiva (mini curso do MatLab).
+. *Regression/Estimation* - Utilizado na predição de valores contínuos, por exemplo, preço de uma casa baseado nas suas características.
+
+==== Unsupervised - Não Supervisionado
+
+Técnicas de aprendizado não supervisionado são aquelas em que a resposta correta é desconhecida no momento em que o algoritmo é treinado, ou seja, utiliza-se #_unlabelled data_#.
+
+. *#Clustering#* - Utilizado para agrupar casos similares ou encontrar padrões, por exemplo, agrupar pacientes.
+.. *Anomaly detection* - Utilizado para descobrir casos não usuais ou anormais, por exemplo, fraude de cartão de crédito.
+. *#Associations#* - Utilizado para encontrar itens ou eventos que ocorrem de maneira conjunta, por exemplo, itens que geralmente são comprados juntos por um cliente.
+. *Sequence mining* - Utilizado para predizer eventos seguintes, por exemplo, determinar o _click stream_ em websites.
+. *#Dimension Reduction/Feature selection#* - Utilizado para reduzir o tamanho dos dados utilizados, ou seja, utilizar uma quantidade menor de _features_.
+. *Recommendation systems* - Associa as preferências das pessoas com outras que possuem gostos similares e recomenda novos itens à elas, por exemplo, Netflix e Amazon prime. 
+
+== Módulo 2
+
+=== Regression - Regressão
+
+Ao utilizar regressões existem dois tipos de variáveis:
+
+. Variável dependente (Y) - É o objetivo do modelo, aquilo que ele deve predizer. Também é denominada de variável alvo ou objetivo  (_target variable_,_goal_)
+. Variável independente (X)- Também denominadas de variáveis explanatórias (_explanatory variables_). São as variáveis de causa da variável de objetivo.
+
+Existem dois tipos de modelos de regressão:
+
+. Regressão simples - Quando somente uma variável independente é utilizada para estimar a variável dependente. Pode ser linear ou não-linear.
+. Regressão múltipla - Quando mais de uma variável independente é utilizada para estimar a variável dependente. Pode ser linear ou não-linear
+
+Alguns exemplos de aplicação são:
+
+. Predição de vendas, baseado na idade, escolaridade e região demográfica.
+. Estimação de preços.
+
+Alguns dos algoritmos utilizados são:
+
+. Ordinal regression.
+. Poisson regression.
+. Fast forest quantile regression.
+. Linear, Polynomial, Lasso, Stepwise, Ridge regression.
+. Bayesian linear regression.
+. Neural network regression.
+. Decision forest regression.
+. Boosted decision tree regression.
+. KNN (K-nearest neighbors)
+
+== Módulo 3
+=== Classification - Classificação
+
+Alguns dos algoritmos utilizados são:
+
+. #Decision Trees.#
+. Naive Bayes.
+. Linear Discriminant Analysis.
+. #k-Nearest Neighbor.#
+. #Logistic Regression.#
+. Neural Networks.
+. #Support Vector Machines (SVM).#
+
+Existem diversos métodos para verificar a eficiência do modelo de classificação, alguns deles são:
+
+==== Jaccard index
+
+É a relação entre o tamanho da intersecção e da união entre dois conjuntos de classes (real e predição). Este índice varia de 0 a 1, sendo 1 o melhor possível.
+
+==== F1-score
+
+. Precisão - É uma medida da acurácia do modelo, calculada como sendo a razão entre os TP pelos TP+FP
+. Recall - É a taxa de TP, calculado com sendo a razão entre os TP pelos TP+FN
+
+Com estes valores calculados para cada classe é possível calcular o valor do F1-score para cada classe. O F1-score é a média harmônica entre a precisão e o recall [2*(prec. x rec.)/(prec. + rec.)].
+
+NOTE: TP - True positives, FP - False positives, TN - True negatives, FN - False negatives.
+
+==== Log loss
+
+Quanto mais próximo de zero melhor.
+
+=== Decision Trees
+
+É um algoritmo de classificação em que se cria uma árvore, onde, cada nó é um teste em relação à algum parâmetro, os galhos sào os resultados possíveis para esse teste e as folhas são a classe em que o dado pertence.
+
+A árvore é projetada de forma que os parâmetros escolhidos são aqueles que proporcionam a maior pureza possível dos dados, isto é, em uma determinada folha a têndencia é que só haja uma classe possível como resposta.
+
+São definidos dois conceitos:
+
+. Entropia: É o grau que mede o quão impuro está uma folha.
+. Ganho de informação: É o grau que mede o quanto a entropia diminuiu após um nó.
+
+Esses dois atributos são inversamente proporcionais, à medida que a entropia deve diminuir ao percorrer a árvore, o ganho de informação deve aumentar.
+
+=== Logistic Regression
+
+De forma similar à regressão linear, este algoritmo procura determinar a classe de um determinado dado com base nos parâmetros numéricos fornecidos.
+
+Este tipo de algoritmo é utilizado em casos em que:
+
+. A variável alvo é binária - 0/1, sim/não.
+. A probabilidade as amostra fornecido pertencer à classe estimada é necessária.
+. Os dados podem ser separados de forma linear.
+. É necessário entender o impacto dos parâmetros.
+
+=== Support Vector Machine
+
+É um algoritmo que procura separar as classes por um hiperplano, caso de um espaço 2D, seria o equivalente a separar as amostrar de cada classe por uma linha reta. 
+
+É importante saber que as amostras devem ser possíveis de separar utilizando uma linha reta. Caso isso não seja possível, podemos utilizar um artifício matemático denominado _Kernelling_, esse artifício consiste em transformar os dados para uma dimensão superior de forma a possibilitar a separação dos mesmos por um hiperplano. Isso feito aplicando uma função matemática, que é denominada de _Kernel_, um exemplo disso seria aplicar a função quadrática num conjunto de dados linear, dessa forma, o conjunto passará a possuir uma forma parabólica, que então, poderá ser separado por uma linha reta.
+
+Existem 4 tipos de _Kernelling_:
+
+. Linear.
+. Polinomial.
+. Radial Basis Function (RBF).
+. Sigmoid.
+
+Algumas vantagens desse algoritmo são:
+
+. Preciso em espaços multi-dimensionais.
+. Consumo de memória eficiente, já que ele utiliza somente os pontos próximos do hiper plano (_support vectors_).
+
+E as desvantagens são:
+
+. Têndencia de _over-fitting_ se o número de parâmetros é muito maior que o número de amostras.
+. Não possui estimação de probabilidade.
+. Não são eficientes se existem muitos dados (mais de 1000 linhas).
+
+Algumas aplicações são:
+
+. Reconhecimento de imagens.
+. _Text mining_.
+. Detecção de spam.
+. Análise de sentimentos.
+. Classificação de expressão de genes.
+. Regressão, detecção de _outliers_ e _clustering_.
+
+== Módulo 4
+
+=== Clustering
+
+Consiste em encontrar um agrupamento dos dados de forma não-supervisionada. Os objeto de um determinado grupo são parecidos com os outros objetos do mesmo grupo e são diferentes dos objetos em um outro grupo.
+
+Exemplos:
+
+* Vendas/Marketing
+.. Identificação de padrão de compras
+.. Recomendação de novos livros ou filmes para clientes novos
+* Bancos
+.. Utilizando os agrupamentos de transações comuns é possível detectar fraudes no cartão de crédito
+.. Identificação dos clientes
+* Seguradoras
+.. Detecção de fraudes
+.. Risco ao fornecer seguros para determinados clientes
+* Mídia
+.. Categorizar notícias, baseado no conteúdo
+.. Recomendar notícias similares
+* Medicina
+.. Caracterizar sintomas dos pacientes
+
+Alguns dos algoritmos utilizados são:
+
+* Partitioned-base Clustering: São os algoritmos que geram grupos de formato esférico. Eles são utilizados para uma quantidade média a grande de dados. Nessa categoria existem os seguintes algoritmos:
+.. #k-Means#
+.. k-Median
+.. Fuzzy c-Means
+* Hierarchical Clustering: Produzem árvores de agrupamentos. Geralmente são usados para pequenas quantidades de dados. Alguns algoritmos são:
+.. #Agglomerative#
+.. Divisive
+* Density-based Clustering: Produzem agrupamentos de forma variada, são utilizados quando há ruído no conjunto de dados. Alguns algoritmos são:
+.. #DBSCAN#
+
+==== K-Means
+
+Consiste em dividir os dados em _k_ grupos sem intersecções. Objetos num mesmo grupo são similares, objetos de diferentes grupos são dissimilares.
+
+A distância entre as amostras é utilizada para formar os grupos, ou seja, é feita uma otimização de forma que a distância entre as amostras dentro de um agrupamento seja minimizada. Essa distância pode ser, por exemplo, a distância euclidiana entre os pontos. Outros tipos de distância também podem ser utilizados.
+
+NOTE: É importante normalizar os parâmetros para evitar têndencias devido à grandeza dos mesmos.
+
+Para avaliar a performance do modelo podemos:
+
+* Comparar os agrupamentos com os dados reais. Porém, em casos reais, essa informação não está disponível.
+* Utilizar a média das distâncias entre os pontos dos agrupamentos, ou entre os pontos e o respectivo centróide.
+
+Para determinar a quantidade de agrupamentos podemos calcular o modelo para diferentes valores de _k_ e comparar os modelos em relação à alguma métrica, por exemplo, distância média dos pontos para os centróides. Entretanto, note que, ao aumentar o valor de _k_, aumentamos o número de agrupamentos, e assim, a distância média *SEMPRE* irá diminuir. Portanto, não devemos escolher o _k_ que gerar a menor distância média, e sim o _k_ em que ocorre uma grande mudança na taxa de variação do gráfico de distância média vs. _k_. À este método se dá o nome de método cotovelo (_elbow method_).
+
+==== Hierarchical Clustering
+
+Consiste em agrupar os dados em formato de árvore. A forma de agrupação pode ser feita de duas formas: aglomerativa ou divisiva. 
+
+Vantagens deste método:
+
+. Não necessita da especificação do número de grupos
+. Fácil de implementar
+. Produz um dendrograma, que ajuda a interpretar os dados
+
+Desvantagens:
+
+. O algoritmo não é capaz de desfazer uma junção de grupos, caso ela não seja muito boa
+. Geralmente tem alto tempo computacional
+. Em alguns casos pode ser difícil de identificar a quantidade de grupos no dendrograma
+
+===== Divisive algorithm
+Consiste em partir do nó raiz e ir ramificando a árvore até chegar nas folhas.
+
+===== Agglomerative algorithm
+Consiste em criar grupos individuais para cada amostra e então agrupar os grupos similares. Pensando na forma de uma árvore, esta técnica parte das folhas e vai unindo-as até chegar na raiz.
+
+Para agrupar diferentes grupos, é necessário calcular a distância entre esses grupos, para isso, existem diversas maneiras de calcular esta distância, algumas delas são:
+
+* Single-Linkage Clustering: Minimum distance between clusters
+* Complete-Linkage Clustering: Maximum distance between clusters
+* Average Linkage Clustering: Average distance between clusters
+* Centroid Linkage Clustering: Distance between cluster centroids
+
+Esta também é a técnica mais utilizada.
+
+==== Density-Based Clustering
+
+Neste tipo de modelo temos o _DBSCAN_, que significa _Density-Based Spatial Clustering of Applications with Noise_. Ele é um dos algoritmos mais comuns de agrupamento. 
+
+Este algoritmo funciona baseado na densidade das amostras. Para isso, são utilizados dois parâmetros:
+
+* *R* (Raio da vizinhança): Se existem suficientes pontos dentro de um determinado raio, esta região é considerada como sendo densa.
+* *M* (Quantidade mínima de vizinhos): Determina a quantidade mínima de pontos para considerar como sendo um agrupamento. 
+
+Os pontos podem ser categorizados em três tipos:
+. _core point_: Um ponto pode ser considerado como tal se a quantidade de vizinhos daquele ponto num raio *R* for no mínimo *M*
+. _border point_: Um ponto pode ser considerado como tal se a sua vizinhança contém menos do que *M* pontos ou se ele estiver numa distância menor do que *R* de algum _core point_
+. _outlier point_: Um ponto pode ser considerado como tal se ele não for um _core_ ou _border point_.
+
+== Módulo 5
+
+=== Recommender Systems 
+
+Existem dois tipos de sistemas de recomendação:
+
+* Baseado em conteúdo: Consiste em encontrar sugestões similares ao que o cliente gostou no passado.
+* Filtro Colaborativo: Consiste em encontrar sugestões para um determinado cliente baseado no que clientes similares gostaram.
+
+Para implementar um sistema de recomendações existem duas formas:
+
+* Baseado em memória: Utiliza todo o conjunto de dados disponível para criar uma recomendação.
+. Este tipo de sistema utiliza técnicas estatísticas para extrapolar clientes ou itens, e.g., _Pearson Correlation_, _Cosine Similarity_, _Euclidean Distance_ e outras.
+* Baseado em modelo: Desenvolve um modelo do cliente na tentativa de aprender suas preferências.
+. Esses modelos podem ser criados utilizando técnicas de ML. como regressão, _clustering_, classificação e etc.
+
+==== Content-Based Recommender Systems
+
+O processo de recomendação é baseado na similaridade dos itens que o cliente gostou no passado.
+
+==== Collaborative Filtering
+
+Existem duas formas de realizar a recomendação:
+
+===== Baseado no usuário
+
+Ou seja, baseado nas vizinhanças do usuário.
+
+Nesse modo, o recomendador procura por usuários semelhantes ao usuário que irá receber a recomendação, e então, utiliza as escolhas desses usuários similares para gerar uma recomendação.
+
+===== Baseado nos itens 
+
+Ou seja, baseado na semelhança dos itens.

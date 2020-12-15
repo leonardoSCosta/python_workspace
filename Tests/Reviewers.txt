@@ -1,0 +1,27 @@
+First Name	Middle Initial (optional)	Last Name	E-mail	Organization	Primary Subject Area	Secondary Subject Areas
+Alexander	L	Fradkov	fradkov@mail.ru	Saint Petersburg State University		
+Ali		Mollajafari	omid.robotics.ssl@gmail.com	Shahed University		
+Andre		Ryll	management@tigers-mannheim.de	TIGERs Mannheim		
+Görkem		Say	gorkem.say@robotics.neu.edu.tr	Near East University		
+Haodong		Zhang	aqz@zju.edu.cn	Zhejiang University		
+Ifeoluwapo		Ademolu-Odeneye	ifeoluwa@mit.edu	MIT RoboTeam		
+Juan	P	Almagro	jalmagro3@gatech.edu	Robojackets RoboCup		
+Julien		Allali	julien.allali@enseirb-matmeca.fr	Enseirb-MATMECA		
+Kendall	W	Zhu	kzhu@college.harvard.edu	RFC Cambridge		
+Leonardo 	da Silva	Costa	unieleocosta@fei.edu.br	University Center of FEI		
+li		hao	haoli_alicia@sjtu.edu.cn	Shanghai Jiao Tong University		
+Lucas	G	Corrêa	guimaraes211297@gmail.com	IME		
+Masahide		Ito	masa-ito@ist.aichi-pu.ac.jp	Aichi Prefectural University		
+Mathew		MacDougall	ubcrobocup@gmail.com	UBC Thunderbots		
+Maximiliano		Aubel	maximiliano.aubel@sansano.usm.cl	Sysmic Robotics		
+meisam		kasaeian naeini	meisam.kassaeian@gmail.com	qiau		
+Mohammad Reza		Kolani	mr_kolani@aut.ac.ir	Amirkabir Univeristy of Technology		
+Omid		Najafi	onajafi141@gmail.com	Immortals Robotics		
+Paul		Bergmann	paul.bergmann@robotics-erlangen.de	ER-Force		
+Rafael		Guedes Lang	rafael.lang@wr.sc.usp.br	Warthog Robotics		
+Reynaldo	S	de Lima	reynaldo.sdlima@gmail.com	ITAndroids		
+Roberto		Fernandes	rcf6@cin.ufpe.br	RobôCIn		
+Roboteam		Twente	info@roboteamtwente.nl	Roboteam Twente		
+Shamin		Aggarwal	shamin@iitkgp.ac.in	Kharagpur RoboSoccer Students' Group		
+Toko		Sugiura	sugi@toyota-ct.ac.jp	National Institute of Technology, Toyota College		
+Toshiyuki		Beppu	bepputb@gmail.com	MCT Susano Logics		
