@@ -8,6 +8,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import Dropout
+from tensorflow.keras.utils import plot_model
 
 training_data = pd.read_csv('./FB_Train.csv')
 training_data = training_data.iloc[:, 4].values
@@ -52,6 +53,8 @@ for i in [True, True, False]:
 
 # Adicionando a camada de saída
 rnn.add(Dense(units=1))
+
+plot_model(rnn, to_file='./rnn.png', show_shapes=True)
 
 # Compilando a rede
 rnn.compile(optimizer='adam', loss='mean_squared_error')

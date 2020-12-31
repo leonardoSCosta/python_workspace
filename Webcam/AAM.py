@@ -76,6 +76,36 @@ def pad_image(image, d_width, d_height):
     return result
 
 
+def pre_process_image(image):
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    faces = detector(gray, 0)
+    out_face = np.zeros_like(image)
+
+    for face in faces:
+        shape = predictor(gray, face)
+
+        (x0, y0, w, h) = face_utils.rect_to_bb(face)
+
+        shape = face_utils.shape_to_np(shape)
+
+        remap = np.zeros_like(shape)
+        feature_mask = np.zeros((image.shape[0], image.shape[1]))
+
+        remap = cv2.convexHull(shape)
+        cv2.fillConvexPoly(feature_mask, remap[0:27], 1)
+
+        feature_mask = feature_mask.astype(np.bool)
+        out_face[feature_mask] = image[feature_mask]
+
+        # Recorta o rosto
+        out_face = out_face[y0:y0+h, x0:x0+w]
+        out_face = pad_image(out_face, 200, 200)
+
+        # cv2.imshow("Frame", out_face)
+        return out_face
+    return out_face
+
+
 if __name__ == "__main__":
     i = 0
     j = 0
@@ -90,10 +120,11 @@ if __name__ == "__main__":
         if j == len(image_names[i]):
             j = 0
             i = i+1
+
+        t0 = time.monotonic_ns()
         frame = imutils.resize(frame, width=400)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-        t0 = time.monotonic_ns()
         faces = detector(gray, 0)
 
         for face in faces:
@@ -126,8 +157,8 @@ if __name__ == "__main__":
             # t1 = time.monotonic_ns()
             print("FPS:", round(1e9/(t1-t0)), end="\r")
 
-            key = cv2.waitKey(1) & 0xFF
-            if key == ord("q"):
-                break
+        key = cv2.waitKey(1) & 0xFF
+        if key == ord("q"):
+            break
     cv2.destroyAllWindows()
     webcam.stop()
