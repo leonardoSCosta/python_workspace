@@ -1,19 +1,20 @@
-close all; clear; clc;
+% close all; clear; clc;
 %% LOAD IMAGE DATA
 load network_1.mat
 %% Paths
-image_path = './Images/';
-label_path = './Frame_Labels/PSPI/';
+image_path = './Images/042-ll042/ll042t1aaaff/';
+test_path = './Images/043-jh043/jh043t1aeaff/';
+label_path = './Frame_Labels/PSPI/042-ll042/ll042t1aaaff/';
 
 aux = split(genpath(label_path), ':');
 exp_path = aux(2:end);
 
 %% Read labels
 labels = [];
-for i = 1:length(exp_path)
-    
-    if endsWith(exp_path{i}, "ff")
-        Files=dir(exp_path{i});
+% % for i = 1:length(exp_path)
+% %     
+% %     if endsWith(exp_path{i}, "ff")
+        Files=dir(aux{1});
         
         for k=3:length(Files)
            FileNames=Files(k).folder + "/" + Files(k).name;
@@ -21,22 +22,42 @@ for i = 1:length(exp_path)
            labels = [labels, fscanf(fileID, '%f')];
            fclose(fileID);
         end
-    end
-end
+%     end
+% end
 
 labels = labels';
-labels_cat = categorical(labels);
+% labels_cat = categorical(labels);
 
+labelsTest = [];
+        Files=dir('./Frame_Labels/PSPI/043-jh043/jh043t1aeaff/');
+        
+        for k=3:length(Files)
+           FileNames=Files(k).folder + "/" + Files(k).name;
+           fileID = fopen(FileNames,'r');
+           labelsTest = [labelsTest, fscanf(fileID, '%f')];
+           fclose(fileID);
+        end
 
 %% Create Datastore
 ds = imageDatastore(image_path, 'FileExtensions', '.png', 'IncludeSubfolders', true, 'Labels', labels);
+dsTest = imageDatastore(test_path, 'FileExtensions', '.png', 'IncludeSubfolders', true, 'Labels', labelsTest);
+
+% for i = 500 : length(ds.Files)
+%     ds.Files = setdiff(ds.Files,ds.Files{i});
+% end
+% 
+% labels = labels(500:end)';
+% ds.Labels = labels;
+
 ds.ReadFcn = @customReadDatastoreImage;
+dsTest.ReadFcn = @customReadDatastoreImage;
 
 imdsNew = transform(ds,@transformFcn,'IncludeInfo',true);
+imdsNewTest = transform(dsTest,@transformFcn,'IncludeInfo',true);
 
 % training_data = zeros(200, 200, 3, length(ds.Files), 'uint8');
 
-% for i = 1:length(ds.Files)
+% for i = 1:length(ds.Files)s
 %     training_data(:,:,:,i) = imresize(imread(ds.Files{i}), [200 200]);
 %     fprintf("Files read %d\n", i);
 %     if i == 300
@@ -47,14 +68,18 @@ imdsNew = transform(ds,@transformFcn,'IncludeInfo',true);
 % [imTrain, imTest]  = splitEachLabel(ds, 1, 'randomize');
 %% Train
 options = trainingOptions('adam', ...
-    'InitialLearnRate',0.01, ...
-    'MaxEpochs',20, ...
-    'Verbose',true, ...
-    'Plots','training-progress');
+    'InitialLearnRate', 0.01, ...
+    'MaxEpochs', 5, ...
+    'Verbose', true, ...
+    'ExecutionEnvironment', 'cpu',...
+    'MiniBatchSize', 2,...
+    'Plots', 'training-progress');
 
 net = trainNetwork(imdsNew, lgraph_1, options);
-
-
+%%
+res = cell2mat(predict(net, imdsNewTest));
+plot(res); hold on;
+plot(labelsTest);
 %% Functions
 function [dataOut,info] = transformFcn(data,info)
     if(length(info) > 1)
