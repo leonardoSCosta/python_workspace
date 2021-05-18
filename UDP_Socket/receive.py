@@ -1,6 +1,8 @@
 import socket
 import struct
 import pickle
+import json
+
 
 MCAST_GRP = '224.1.1.1'
 MCAST_PORT = 5007
@@ -20,4 +22,9 @@ mreq = struct.pack("4sl", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY)
 sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
 
 while True:
-    print(pickle.loads(sock.recv(10240)))
+    packet = sock.recv(4096)
+    data = json.loads(packet.decode('utf-8'))
+    for key in data.keys():
+        print(key)
+        for p in data[key]:
+            print(p.__str__())
