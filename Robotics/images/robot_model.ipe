@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70212" creator="Ipe 7.2.13">
+<info created="D:20230214115606" modified="D:20230413192329"/>
+<preamble>\usepackage{amsmath}</preamble>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="small" value="\small"/>
+<textsize name="tiny" value="\tiny"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="75%" value="0.75"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<layer name="beta"/>
+<layer name="gamma"/>
+<layer name="delta"/>
+<layer name="epsilon"/>
+<view layers="alpha beta gamma" active="gamma"/>
+<path layer="gamma" stroke="black" fill="lightblue" dash="dashed" pen="fat">
+40 656 m
+208 656 l
+</path>
+<path stroke="black" dash="dashed" pen="fat">
+80.5441 645.515 m
+200.474 685.492 l
+</path>
+<path layer="alpha" stroke="black" pen="ultrafat" arrow="normal/normal">
+48 608 m
+48 704 l
+</path>
+<path stroke="black" pen="ultrafat" arrow="normal/normal">
+48 608 m
+208 608 l
+</path>
+<path layer="beta" matrix="0.8 0.6 -0.6 0.8 249.6 -60.8" stroke="black" fill="lightblue" pen="heavier">
+336 624 m
+35.7771 0 0 -35.7771 320 656 352 672 a
+h
+</path>
+<use matrix="1 0 0 1 -80 16" name="mark/disk(sx)" pos="192 640" size="normal" stroke="black"/>
+<path layer="gamma" matrix="0 1 -1 0 784 448" stroke="darkcyan" fill="lightblue" pen="fat" arrow="normal/normal">
+216 648 m
+228.219 611.344 l
+</path>
+<path matrix="1 0 0 1 -79.7825 16.0722" stroke="darkcyan" fill="lightblue" pen="fat" arrow="normal/normal">
+216 648 m
+228.219 611.344 l
+</path>
+<text matrix="1 0 0 1 -102.813 8.2147" transformations="translations" pos="304 656" stroke="black" type="label" width="8.324" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">\theta</text>
+<text matrix="1 0 0 1 -89.0451 23.4172" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="15.3" height="7.415" depth="2.58" valign="baseline" size="LARGE" style="math">v_x</text>
+<text matrix="1 0 0 1 -64.5117 79.2923" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="14.784" height="7.409" depth="4.91" valign="baseline" size="LARGE" style="math">v_y</text>
+<path layer="delta" matrix="1 0 0 1 -16 16" stroke="purple" pen="fat">
+216 648 m
+252 648 l
+</path>
+<path matrix="1 0 0 1 -16 16" stroke="purple" pen="fat">
+216 648 m
+216 660 l
+</path>
+<path matrix="-0.999995 -0.00306612 0.00306612 -0.999995 425.786 1312.66" stroke="navy" pen="heavier">
+216 648 m
+228 648 l
+</path>
+<path matrix="1 0 0 1 -16 16.5825" stroke="navy" pen="heavier">
+216 648 m
+216 612 l
+</path>
+<text matrix="1 0 0 1 -8.19205 48.3494" transformations="translations" pos="216 600" stroke="navy" type="label" width="36.44" height="7.473" depth="2.49" valign="baseline" style="math">v_x\sin(\theta)</text>
+<text layer="epsilon" matrix="1 0 0 1 68.6812 21.323" transformations="translations" pos="272 624" stroke="black" type="label" width="213.727" height="45.585" depth="37.05" valign="baseline" size="LARGE" style="math">\begin{cases}
+\dot x = v_x\sin(\theta) + v_y\cos(\theta)\\
+\dot y = -v_x\cos(\theta) + v_y\sin(\theta)\\
+\dot \theta = \omega
+\end{cases}
+</text>
+<text layer="delta" matrix="1 0 0 1 -18.722 18.9286" transformations="translations" pos="256 648" stroke="purple" type="label" width="37.32" height="7.472" depth="2.85" valign="baseline" style="math">v_y \cos(\theta)</text>
+<text matrix="1 0 0 1 -54.1308 32.7282" transformations="translations" pos="256 648" stroke="purple" type="label" width="36.213" height="7.472" depth="2.85" valign="baseline" style="math">v_y \sin(\theta)</text>
+<text matrix="1 0 0 1 -18.1797 18.7877" transformations="translations" pos="216 600" stroke="navy" type="label" width="37.547" height="7.473" depth="2.49" valign="baseline" style="math">v_x\cos(\theta)</text>
+<path layer="gamma" matrix="1 0 0 1 -80 16" stroke="darkcyan" pen="fat" arrow="normal/normal">
+174.165 650.9 m
+20.9026 0 0 20.9026 192 640 195.017 619.316 a
+</path>
+<text matrix="1 0 0 1 -144.034 37.665" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="11.114" height="7.412" depth="0" valign="baseline" size="LARGE" style="math">\omega</text>
+<text matrix="1 0 0 1 162 -228" transformations="translations" pos="32 816" stroke="black" type="label" width="18.416" height="14.119" depth="0" valign="baseline" size="huge" style="math">X</text>
+<text matrix="1 0 0 1 -10 -126.119" transformations="translations" pos="32 816" stroke="black" type="label" width="16.235" height="14.119" depth="0" valign="baseline" size="huge" style="math">Y</text>
+<text matrix="1 0 0 1 75.21 -64" transformations="translations" pos="32 656" stroke="black" type="label" width="9.579" height="7.412" depth="0" valign="baseline" size="LARGE" style="math">x</text>
+<text matrix="1 0 0 1 0 -2.03" transformations="translations" pos="32 656" stroke="black" type="label" width="8.837" height="7.41" depth="3.35" valign="baseline" size="LARGE" style="math">y</text>
+<text layer="delta" matrix="1 0 0 1 84.07 6.24" transformations="translations" pos="272 612" stroke="navy" type="label" width="189.064" height="12.893" depth="4.91" valign="baseline" size="LARGE" style="math">V_y = -v_x\cos(\theta) + v_y\sin(\theta)</text>
+<text matrix="1 0 0 1 84.6812 21.323" transformations="translations" pos="272 624" stroke="navy" type="label" width="176.189" height="12.893" depth="4.91" valign="baseline" size="LARGE" style="math">V_x = v_x\sin(\theta) + v_y\cos(\theta)</text>
+<text matrix="1 0 0 1 84.6812 -22.1786" transformations="translations" pos="272 612" stroke="navy" type="label" width="41.394" height="15.837" depth="0" valign="baseline" size="LARGE" style="math">\dot \theta = \omega</text>
+<text layer="epsilon" matrix="1 0 0 1 68.6812 117.323" transformations="translations" pos="272 624" stroke="black" type="label" width="94.014" height="45.585" depth="37.05" valign="baseline" size="LARGE" style="math">\begin{cases}
+X = \dot x dt\\
+Y = \dot y dt\\
+\theta = \dot \theta dt
+\end{cases}
+</text>
+<path layer="gamma" matrix="1 0 0 1 -64 0" stroke="black" fill="lightblue" dash="dashed" pen="fat">
+176 608 m
+176 624 l
+</path>
+<text layer="epsilon" transformations="translations" pos="96 512" stroke="black" type="minipage" width="90" height="43.79" depth="38.9" valign="baseline" size="Large">\begin{equation*}A = 
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\end{equation*}</text>
+<text transformations="translations" pos="272 448" stroke="black" type="label" width="0" height="0" depth="0" valign="baseline" style="math"></text>
+<text matrix="1 0 0 1 112 0" transformations="translations" pos="96 512" stroke="black" type="minipage" width="90" height="43.79" depth="38.9" valign="baseline" size="Large">\begin{equation*}x = 
+\begin{bmatrix}
+x - sp_x \\
+y - sp_y \\
+\theta - sp_\theta \\
+v - sp_v
+\end{bmatrix}
+\end{equation*}</text>
+<text matrix="1 0 0 1 0 -96" transformations="translations" pos="96 512" stroke="black" type="minipage" width="90" height="43.79" depth="38.9" valign="baseline" size="Large">\begin{equation*}B = 
+\begin{bmatrix}
+dt &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; dt &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; dt &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; dt
+\end{bmatrix}
+\end{equation*}</text>
+<text matrix="1 0 0 1 144 -96" transformations="translations" pos="96 512" stroke="black" type="minipage" width="90" height="43.79" depth="38.9" valign="baseline" size="Large">\begin{equation*}u = 
+\begin{bmatrix}
+v_x \\
+v_y \\
+v_\theta \\
+a_v
+\end{bmatrix}
+\end{equation*}</text>
+<path layer="gamma" stroke="black" pen="fat" arrow="normal/normal" rarrow="normal/normal">
+200 656 m
+88 0 0 88 112 656 195.484 683.828 a
+</path>
+</page>
+<page section="">
+<layer name="robot"/>
+<layer name="trajeto"/>
+<layer name="modelo"/>
+<layer name="alpha"/>
+<layer name="gamma"/>
+<layer name="beta"/>
+<view layers="robot trajeto modelo gamma beta" active="beta"/>
+<path layer="gamma" matrix="1 0 0 1 -68.6755 71.723" stroke="green" pen="heavier">
+144.491 557.398 m
+302.849 694.144 l
+</path>
+<path layer="robot" matrix="1 0 0 1 -112 112" stroke="black" dash="dashed" pen="fat">
+256 576 m
+384.64 618.88 l
+</path>
+<path matrix="1 0 0 1 -48 48" stroke="black" pen="heavier" arrow="normal/normal" rarrow="normal/normal">
+304 640 m
+112 0 0 112 192 640 298.253 675.418 a
+</path>
+<text matrix="1 0 0 1 -48 48" transformations="translations" pos="304 656" stroke="black" type="label" width="8.324" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">\theta</text>
+<path layer="gamma" matrix="1 0 0 1 -47.9806 47.9775" stroke="green" pen="heavier">
+154.427 683.511 m
+240.16 584.228 l
+</path>
+<path layer="robot" matrix="1 0 0 1 -112 112" stroke="black" fill="lightblue" dash="dashed" pen="fat">
+256 576 m
+384 576 l
+</path>
+<group matrix="1 0 0 1 -112 112">
+<path matrix="0.8 0.6 -0.6 0.8 393.6 -140.8" stroke="black" fill="lightblue" pen="heavier">
+336 624 m
+35.7771 0 0 -35.7771 320 656 352 672 a
+h
+</path>
+<use matrix="1 0 0 1 64 -64" name="mark/disk(sx)" pos="192 640" size="normal" stroke="black"/>
+</group>
+<path layer="gamma" matrix="1 0 0 1 -48 48" stroke="green" pen="heavier">
+160.828 595.377 m
+238.578 595.377 l
+</path>
+<text matrix="1 0 0 1 -38.8149 51.486" transformations="translations" pos="225.691 607.657" stroke="green" type="label" width="9.68" height="7.41" depth="3.35" valign="baseline" size="LARGE" style="math">\gamma</text>
+<path layer="modelo" matrix="1 0 0 1 -67.2215 31.4021" stroke="blue" rarrow="normal/normal">
+192 640 m
+212.567 616.183 l
+</path>
+<text matrix="1 0 0 1 -65.5177 30.4921" transformations="translations" pos="201.721 628.743" stroke="blue" type="label" width="7.813" height="7.412" depth="0" valign="baseline" size="LARGE" style="math">e</text>
+<path layer="gamma" matrix="1 0 0 1 -48 48" stroke="green" pen="heavier" arrow="normal/normal" rarrow="normal/normal">
+235.9 595.377 m
+47.4268 0 0 47.4268 188.473 595.377 224.369 626.374 a
+</path>
+<path layer="modelo" matrix="1 0 0 1 -48 48" stroke="red" arrow="normal/normal" rarrow="normal/normal">
+308.374 678.791 m
+122.669 0 0 122.669 192 640 302.223 693.838 a
+</path>
+<text matrix="1 0 0 1 -48 48" transformations="translations" pos="312.13 689.735" stroke="red" type="label" width="71.472" height="11.953" depth="3.35" valign="baseline" size="LARGE" style="math">\beta = \gamma - \theta</text>
+<text layer="beta" matrix="1 0 0 1 -248.164 -107.227" transformations="translations" pos="254.314 611.374" stroke="black" type="label" width="334.021" height="56.855" depth="48.35" valign="baseline" size="LARGE" style="math">\begin{cases}
+e[k+1] = e[k]  - v_x\cos(\beta)dt - a_y\sin(\beta)dt^2 \\
+\beta[k+1] = \beta[k] - \omega[k]dt \\
+\Delta v[k+1] = \Delta v[k] + a_y[k]dt \\
+f[k+1] = f[k]-a_y[k]dt^2
+\end{cases}
+</text>
+<group layer="robot" matrix="1 0 0 1 -112 112">
+<path matrix="0 1 -1 0 904 360" stroke="darkcyan" fill="lightblue" pen="fat" arrow="normal/normal">
+216 648 m
+228.219 611.344 l
+</path>
+<text matrix="1 0 0 1 47.7327 -8.59803" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="14.784" height="7.409" depth="4.91" valign="baseline" size="LARGE" style="math">v_y</text>
+</group>
+<path layer="modelo" matrix="-1 0 0 -1 400 1264" stroke="red" pen="heavier" rarrow="normal/normal">
+232.648 603.042 m
+256 576 l
+</path>
+<path matrix="1 0 0 1 -112 112" stroke="red" pen="heavier" rarrow="normal/normal">
+265.613 564.867 m
+256 576 l
+</path>
+<text matrix="0.801905 0.597452 -0.597452 0.801905 356.617 61.843" pos="208 608" stroke="red" type="label" width="38.754" height="7.473" depth="2.49" valign="baseline" style="math">v_x\cos(\beta)</text>
+<text matrix="1 0 0 1 -95.3343 86.1559" transformations="translations" pos="208 608" stroke="red" type="label" width="37.42" height="7.472" depth="2.85" valign="baseline" style="math">v_y\sin(\beta)</text>
+<group layer="robot" matrix="1 0 0 1 -112 112">
+<text matrix="-0.707107 -0.707107 0.707107 -0.707107 3.81429 1238.27" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="11.114" height="7.412" depth="0" valign="baseline" size="LARGE" style="math">\omega</text>
+<path stroke="darkcyan" pen="fat" arrow="normal/normal">
+288 628 m
+61.0574 0 0 61.0574 256 576 240.268 634.996 a
+</path>
+</group>
+<text layer="beta" matrix="1 0 0 1 -341.641 -184.841" transformations="translations" pos="347.791 504.477" stroke="black" type="label" width="374.61" height="112.864" depth="104.51" valign="baseline" size="LARGE" style="math">\begin{cases}
+A = 
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1\\
+\end{bmatrix}
+\;&amp;
+x = 
+\begin{bmatrix}
+e \\
+\beta \\
+\Delta v\\
+f
+\end{bmatrix} \\[3em]
+B = 
+\begin{bmatrix}
+-\cos(\beta)dt &amp; 0 &amp; -\sin(\beta)dt^2\\
+0 &amp; -dt &amp; 0\\
+0 &amp; 0 &amp; dt \\
+0 &amp; 0 &amp; -dt^2
+\end{bmatrix}
+\;&amp;
+u = 
+\begin{bmatrix}
+v_x \\
+\omega \\
+a_y
+\end{bmatrix}
+\end{cases}</text>
+<text layer="alpha" matrix="1 0 0 1 -332.109 -448.099" transformations="translations" pos="344.836 553.98" stroke="black" type="label" width="307.667" height="26.206" depth="17.63" valign="baseline" size="LARGE" style="math">J = \begin{bmatrix}
+e &amp;
+\beta
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+e \\
+\beta
+\end{bmatrix}
++
+\begin{bmatrix}
+v_x &amp;
+\omega
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+v_x \\
+\omega
+\end{bmatrix}
+</text>
+<text matrix="1 0 0 1 -253.422 -318.802" transformations="translations" pos="301.831 379.235" stroke="black" type="label" width="341.394" height="26.206" depth="17.63" valign="baseline" size="LARGE" style="math">\begin{bmatrix}
+e &amp; \beta
+\end{bmatrix}
+\begin{bmatrix}
+e \\ \beta
+\end{bmatrix}
++
+\begin{bmatrix}
+v_x &amp; \omega
+\end{bmatrix}
+\begin{bmatrix}
+v_x \\ \omega
+\end{bmatrix}
+=
+\begin{bmatrix}
+e^2+\beta^2 + v_x^2+\omega^2
+\end{bmatrix}
+</text>
+<path layer="trajeto" matrix="1 0 0 1 -48 48" stroke="red" pen="heavier">
+128 536 m
+180 592
+360 760
+416 548
+464 748 c
+</path>
+<path layer="modelo" matrix="1 0 0 1 -72 40" stroke="darkcyan" fill="lightblue" pen="fat" arrow="normal/normal">
+216 648 m
+228.219 611.344 l
+</path>
+<text matrix="-1 0 0 -1 370.585 1281.83" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="15.3" height="7.415" depth="2.58" valign="baseline" size="LARGE" style="math">v_x</text>
+<use layer="trajeto" name="mark/disk(sx)" pos="209.674 694.381" size="normal" stroke="red"/>
+<path layer="modelo" stroke="purple" arrow="normal/normal" rarrow="normal/normal">
+144 687.999 m
+209.674 694.381 l
+</path>
+<text matrix="1 0 0 1 7.88139 -25.5805" transformations="translations" pos="192 704" stroke="purple" type="label" width="10.147" height="11.953" depth="3.35" valign="baseline" size="LARGE" style="math">f</text>
+<path layer="gamma" matrix="1 0 0 1 -48 48" stroke="green" pen="heavier">
+144.491 557.398 m
+302.849 694.144 l
+</path>
+</page>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" matrix="-0.881101 0.472928 -0.472928 -0.881101 905.386 1056.31" stroke="black" fill="lightblue" dash="dashed" pen="fat">
+256 576 m
+384 576 l
+</path>
+<group matrix="-0.881101 0.472928 -0.472928 -0.881101 905.386 1056.31">
+<path matrix="0.8 0.6 -0.6 0.8 393.6 -140.8" stroke="black" fill="lightblue" pen="heavier">
+336 624 m
+35.7771 0 0 -35.7771 320 656 352 672 a
+h
+</path>
+<use matrix="1 0 0 1 64 -64" name="mark/disk(sx)" pos="192 640" size="normal" stroke="black"/>
+</group>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 905.386 1056.31" stroke="black" dash="dashed" pen="fat">
+256 576 m
+384.64 618.88 l
+</path>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 879.263 1142.97" stroke="black" pen="heavier" arrow="normal/normal" rarrow="normal/normal">
+304 640 m
+112 0 0 112 192 640 298.253 675.418 a
+</path>
+<text matrix="-0.881101 0.472928 -0.472928 -0.881101 879.263 1142.97" transformations="translations" pos="304 656" stroke="black" type="label" width="8.324" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">\theta</text>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 879.263 1142.97" stroke="red" pen="heavier">
+128 536 m
+180 592
+360 760
+416 548
+464 748 c
+</path>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 904.049 1148.5" stroke="blue" rarrow="normal/normal">
+192 640 m
+212.567 616.183 l
+</path>
+<text matrix="-0.881101 0.472928 -0.472928 -0.881101 902.978 1150.11" pos="201.721 628.743" stroke="blue" type="label" width="7.813" height="7.412" depth="0" valign="baseline" size="LARGE" style="math">e</text>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 879.263 1142.97" stroke="red" arrow="normal/normal" rarrow="normal/normal">
+308.374 678.791 m
+122.669 0 0 122.669 192 640 302.223 693.838 a
+</path>
+<text matrix="-0.881101 0.472928 -0.472928 -0.881101 879.263 1142.97" pos="312.13 689.735" stroke="red" type="label" width="71.472" height="11.953" depth="3.35" valign="baseline" size="LARGE" style="math">\beta = \gamma - \theta</text>
+<group matrix="-0.881101 0.472928 -0.472928 -0.881101 905.386 1056.31">
+<path matrix="0 1 -1 0 904 360" stroke="darkcyan" fill="lightblue" pen="fat" arrow="normal/normal">
+216 648 m
+228.219 611.344 l
+</path>
+<text matrix="1 0 0 1 47.7327 -8.59803" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="14.784" height="7.409" depth="4.91" valign="baseline" size="LARGE" style="math">v_y</text>
+</group>
+<path matrix="0.881101 -0.472928 0.472928 0.881101 -90.5504 283.42" stroke="red" pen="heavier" rarrow="normal/normal">
+232.648 603.042 m
+256 576 l
+</path>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 905.386 1056.31" stroke="red" pen="heavier" rarrow="normal/normal">
+265.613 564.867 m
+256 576 l
+</path>
+<text matrix="-0.989111 -0.147172 0.147172 -0.989111 516.208 1322.12" pos="208 608" stroke="red" type="label" width="38.754" height="7.473" depth="2.49" valign="baseline" style="math">v_x\cos(\beta)</text>
+<text matrix="-0.881101 0.472928 -0.472928 -0.881101 895.664 1149.54" pos="208 608" stroke="red" type="label" width="37.42" height="7.472" depth="2.85" valign="baseline" style="math">v_y\sin(\beta)</text>
+<group matrix="-0.881101 0.472928 -0.472928 -0.881101 905.386 1056.31">
+<text matrix="-0.707107 -0.707107 0.707107 -0.707107 3.81429 1238.27" transformations="translations" pos="240 608" stroke="darkcyan" type="label" width="11.114" height="7.412" depth="0" valign="baseline" size="LARGE" style="math">\omega</text>
+<path stroke="darkcyan" pen="fat" arrow="normal/normal">
+288 628 m
+61.0574 0 0 61.0574 256 576 240.268 634.996 a
+</path>
+</group>
+<path matrix="-0.881101 0.472928 -0.472928 -0.881101 904.193 1138.67" stroke="darkcyan" fill="lightblue" pen="fat" arrow="normal/normal">
+216 648 m
+228.219 611.344 l
+</path>
+<text matrix="-0.880791 0.473506 -0.473506 -0.880791 927.68 1095.38" pos="240 608" stroke="darkcyan" type="label" width="15.3" height="7.415" depth="2.58" valign="baseline" size="LARGE" style="math">v_x</text>
+</page>
+</ipe>

@@ -1,0 +1,39 @@
+furia x spirit
+nip x faze
+
+dupla 1 -- 2.41
+nip perde
+spirit perde
+
+simples 1 -- 3
+nip ganha
+
+simples 2 -- 2
+spirit ganha 2
+
+Possibilidades
+P(D1)     *(- Vs1     - Vs2     + Vd1 * 2.41) = G1 -> acerta dupla 1
+P(S1)     *(+ Vs1 * 3 - Vs2     - Vd1       ) = G2 -> acerta simples 1
+P(S2)     *(- Vs1     + Vs2 * 2 - Vd1       ) = G3 -> acerta simples 2
+P(S1 | S2)*(+ Vs1 * 3 + Vs2 * 2 - Vd1       ) = G4 -> acerta simples 1 e 2
+
+Vs1 = 3.35
+Vs2 = 4.2
+Vd1 = 5
+Total = 12.55
+
+-3.35   - 4.2   + 5*2.41 = 4.5
+ 3.35*3 + 4.2*2 - 5      = 13.45
+ 3.35*3 - 4.2   - 5      = 0.85
+-3.35   + 4.2*2 - 5      = 0.05
+
+Objetivo
+G = min(G1 + G2 + G3 + G4)
+
+Variáveis
+Vd1 -> valor de aposta na dupla 1
+Vs1 -> valor de aposta na simples 1
+Vs2 -> valor de aposta na simples 2
+
+Maximizar o ganho
+argmax(G)
