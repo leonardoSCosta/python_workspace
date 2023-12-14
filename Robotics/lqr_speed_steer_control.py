@@ -195,7 +195,7 @@ def lqr_speed_steering_control(state, cx, cy, cw, ck, pe, pth_e, sp, Q, R):
     x[1, 0] = state.y - cy[ind]
     x[2, 0] = state.theta - cw[ind]
     x[3, 0] = state.v - sp[ind]
-    print(K)
+    print(x)
 #      x = np.zeros((4, 1))
 #      x[0, 0] = e
 #      x[1, 0] = th_e

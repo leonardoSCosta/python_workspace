@@ -4,6 +4,7 @@ from math import sin, cos, pi, hypot, radians
 import matplotlib.pyplot as plt
 
 WHEEL_R = 54e-3/2
+WHEEL_D = 72e-3
 # THETA = 33 * pi / 180
 T_STEP = 0.01
 
@@ -36,10 +37,10 @@ def compute_matrixes(alpha, beta):
 #                              [-sin(pi - alpha), cos(pi - alpha), 1],
 #                              [-sin(pi + beta), cos(pi + beta), 1],
 #                              [-sin(2*pi - beta), cos(2*pi - beta), 1]])
-    KINEMATICS = np.asarray([[-sin(alpha), cos(alpha), 1],
-                            [-sin(beta), -cos(beta), 1],
-                            [sin(beta), -cos(beta), 1],
-                            [sin(alpha), cos(alpha), 1]])
+    KINEMATICS = np.asarray([[-sin(alpha), cos(alpha), WHEEL_D],
+                            [-sin(beta), -cos(beta), WHEEL_D],
+                            [sin(beta), -cos(beta), WHEEL_D],
+                            [sin(alpha), cos(alpha), WHEEL_D]])
     INV_KINEMATICS = np.linalg.pinv(KINEMATICS)
     return KINEMATICS, INV_KINEMATICS
 

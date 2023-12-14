@@ -1,4 +1,4 @@
-#!/usr/bin/python3.8
+#!/usr/bin/python3.10
 """
 Otimização matrizes Q e R do LQR
 """
@@ -181,8 +181,8 @@ def calc_fitness(ind: Chromossome):
 
     # Velocidade máxima em X com os ângulos alpha e beta
     velocidade = simulator.compute_kinematics(max_w_in, inv_kin)
-#      print(degrees(alpha_value), degrees(beta_value), np.transpose(velocidade))
-#      input()
+    # print(degrees(alpha_value), degrees(beta_value), np.transpose(velocidade))
+    # input()
     velocidade_x = velocidade[0][0] + velocidade[1][0]
     fitness += velocidade_x
 
@@ -271,7 +271,7 @@ class GA():
         for i in range(self.N):
             if i >= 1:
                 sum_fitness[i] = self.get_fitness(self.population[i]) + \
-                                    sum_fitness[i-1]
+                    sum_fitness[i-1]
             else:
                 sum_fitness[i] = self.get_fitness(self.population[i])
 
@@ -332,7 +332,7 @@ class GA():
     def update_fitness(self):
         start_time = time()
 #          print("Avaliando a aptidão dos individuos...")
-        USE_MULTIHREAD = True
+        USE_MULTIHREAD = False
 
         if USE_MULTIHREAD:
             with Pool() as p:
@@ -380,7 +380,6 @@ class GA():
         best_ind = self.population[result[6]]
         best_ind.fitness_calculated = False
         self.update_population(result)
-
 
         print("Alpha: {}⁰ = {} rad".format(degrees(alpha), alpha),
               "\nBeta: {}⁰ = {} rad".format(degrees(beta), beta))
