@@ -5,12 +5,13 @@ from math import atan2
 from cubic_spline_planner import CubicSpline1D
 from cubic_spline_planner import CubicSpline2D
 
-x = [-2.5, 0.0, 2.5, 5.0, 7.5, 3.0, -1.0]
-y = [0.7, -6, 5, 6.5, 0.0, 5.0, -2.0]
+x = [-2.5, 0.0, 2.5, 5.0, 7.5, 6.0, 5.0]
+y = [0.7, -2, 5, 6.5, 0.0, -2.0, 2.0]
 ds = 0.1  # [m] distance of each interpolated points
 sp = CubicSpline2D(x, y)
 s = np.arange(0, sp.s[-1], ds)
 rx, ry, ryaw, rk = [], [], [], []
+
 for i_s in s:
     ix, iy = sp.calc_position(i_s)
     rx.append(ix)
@@ -34,10 +35,17 @@ plt.legend()
 
 plt.subplots(1)
 plt.plot(s, [np.rad2deg(iyaw) for iyaw in ryaw], "-r", label="yaw")
-plt.plot(s, [np.rad2deg(iyaw) for iyaw in myyaw], "-b", label="my yaw")
+# plt.plot(s, [np.rad2deg(iyaw) for iyaw in myyaw], "-b", label="my yaw")
 plt.grid(True)
 plt.legend()
 plt.xlabel("line length[m]")
 plt.ylabel("yaw angle[deg]")
+
+plt.subplots(1)
+plt.plot(s, rk, "-r", label="curvature")
+plt.grid(True)
+plt.legend()
+plt.xlabel("line length[m]")
+plt.ylabel("curvature")
 
 plt.show()
